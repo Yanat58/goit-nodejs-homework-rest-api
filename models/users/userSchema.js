@@ -33,7 +33,11 @@ const userSchema = new Schema(
     subscription: {
       type: String,
       enum: subscriptionList,
-      default: 'started',
+      default: 'starter',
+    },
+    avatarURL: {
+      type: String,
+      required: true,
     },
   },
   { versionKey: false, timestamps: true }

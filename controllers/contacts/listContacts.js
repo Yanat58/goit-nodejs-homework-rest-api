@@ -10,7 +10,7 @@ const listContacts = async (req, res) => {
       ? ({ owner: _id },
         {
           skip,
-          limit,
+          limit: +limit,
         })
       : { owner: _id, favorite }
   ).populate('owner', 'email');
